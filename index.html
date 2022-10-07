@@ -9,12 +9,92 @@
 </head>
 <body>
     <form>
-        <input type="text">
-        <Button></Button>
+        <h1>Formulário de Cadastro</h1>
         <fieldset>
-            <input name="preferenciaContato" type="radio">
-            <input name="preferenciaContato" type="radio">
-        </fieldset>
+            <legend>Dados Pessoais</legend>
+            <div class="flexHorizontal">
+                <div>
+                    <label for="nomeUsuario">Nome completo:</label>
+                    <input type="text" id="nomeUsuario" name="nomeUsuario" required>
+                </div>
+
+                <div>
+                    <label for="estadoCivil">Estado civil:</label>
+                    <input type="text" name="estadoCivil" id="estadoCivil" required>
+                </div>
+            </div>
+
+            <div class="flexHorizontal">
+                <div>
+                    <label for="emailUsuario">Email:</label>
+                    <input type="email" name="emailUsuario" id="emailUsuario" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="joaozinho@gmail.com" required>
+                </div>
+
+                <div>
+                    <label for="telefoneUsuario">Telefone (opcional): </label>
+                    <input type="tel" name="telefoneUsuario" id="telefoneUsuario" ng-pattern="/^\([1-9]{2}\)[0-9]{4,5}-[0-9]{4}$/" placeholder="13 99999-9999">
+                </div>
+            </div>
+
+            <div>
+                <p class="textoCentralizado">Preferencia de Contato</p>
+                    
+                <div class="flexCentral">
+                    <div>
+                        <input type="radio" name="preferenciaContato" id="contatoPorEmail">
+                        <label for="contatoPorEmail" class="labelInline">Email</label>
+                    </div>
+                        
+                    <div>
+                        <input type="radio" name="preferenciaContato" id="contatoPorTelefone">
+                        <label for="contatoPorTelefone" class="labelInline">Telefone</label>
+                    </div>
+                </div>
+            </div>
+        </fieldset> <!-- Fim do fieldset de dados pessoais -->
+
+        <fieldset class="flexVertical"> 
+            <legend>Endereço</legend>
+            
+            <div class="flexHorizontal"> <!-- Logradouro e número -->
+                <div> 
+                    <label for="logradouroUsuario">Logradouro:</label>
+                    <input type="text" name="logradouroUsuario" id="logradouroUsuario" required>
+                </div>
+                <div>
+                    <label for="numeroCasaUsuario">Número:</label>
+                    <input type="text" name="numeroCasaUsuario" id="numeroCasaUsuario" required>
+                </div>
+            </div> <!-- Logradouro e número -->
+
+            <div class="flexHorizontal"> <!-- Bairro e cidade -->
+                <div>
+                    <label for="bairroUsuario">Bairro (opcional):</label>
+                    <input type="text" name="bairroUsuario" id="bairroUsuario">
+                </div>
+                <div>
+                    <label for="cidadeUsuario">Cidade:</label>
+                    <input type="text" name="cidadeUsuario" id="cidadeUsuario" required>
+                </div> 
+            </div> <!-- Bairro e cidade -->
+
+            <div class="flexHorizontal"> <!-- Estado e CEP -->
+                <div>
+                    <label for=""></label>
+                    <input type="text" name="" id="" required>
+                </div>
+                <div>
+                    <label for=""></label>
+                    <input type="text" name="cepUsuario" id="cepUsuario" pattern="[0-9]{5}-[0-9]{3}$" required> <!-- Estado e CEP -->
+                </div>
+            </div>
+        </fieldset> <!-- Fim do fieldset de endereço -->
+
+        <!-- Botões de submit e reset -->
+        <div class="flexHorizontal">
+            <button id="botaoEnviar">Enviar</button>
+            <button id="botaoLimpar">Limpar</button>
+        </div>
     </form>
 </body>
 </html>
