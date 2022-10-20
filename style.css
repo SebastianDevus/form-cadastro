@@ -37,8 +37,8 @@ form {
     border: 3px solid #1d1d1d;
     padding: 10px;
     margin: auto;
-
-    background: radial-gradient(circle, rgba(48,48,48,1) 67%, rgba(33,33,33,1) 100%);
+    background-color: rgba(48,48,48,1);
+    /* background: radial-gradient(circle, rgba(48,48,48,1) 67%, rgba(33,33,33,1) 100%); */
 }
 
 div {

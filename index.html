@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-        </fieldset> <!-- Fim do fieldset de dados pessoais -->
+        </fieldset> <!-- /Fieldset de dados pessoais -->
 
         <fieldset class="flexVertical"> 
             <legend>Endereço</legend>
@@ -63,9 +63,9 @@
                 </div>
                 <div>
                     <label for="numeroCasaUsuario">Número:</label>
-                    <input type="text" name="numeroCasaUsuario" id="numeroCasaUsuario" required>
+                    <input type="number" name="numeroCasaUsuario" id="numeroCasaUsuario" required>
                 </div>
-            </div> <!-- Logradouro e número -->
+            </div> <!-- /Logradouro e número -->
 
             <div class="flexHorizontal"> <!-- Bairro e cidade -->
                 <div>
@@ -76,19 +76,49 @@
                     <label for="cidadeUsuario">Cidade:</label>
                     <input type="text" name="cidadeUsuario" id="cidadeUsuario" required>
                 </div> 
-            </div> <!-- Bairro e cidade -->
+            </div> <!-- /Bairro e cidade -->
 
             <div class="flexHorizontal"> <!-- Estado e CEP -->
                 <div>
-                    <label for=""></label>
-                    <input type="text" name="" id="" required>
+                    <label for="estadoUsuario">Estado:</label>
+
+                    <!-- Campo de seleção para estado -->
+                    <select name="estadoUsuario" id="estadoUsuario">
+                        <option value="acre"></option> <!-- Opções para os estados -->
+                        <option value="alagoas"></option>
+                        <option value="amapa"></option>
+                        <option value="amazonas"></option>
+                        <option value="bahia"></option>
+                        <option value="ceara"></option>
+                        <option value="distritoFederal"></option>
+                        <option value="espirito santo"></option>
+                        <option value="goias"></option>
+                        <option value="maranhao"></option>
+                        <option value="mato grosso"></option>
+                        <option value="mato grosso do sul"></option>
+                        <option value="minas gerais"></option>
+                        <option value="para"></option>
+                        <option value="paraiba"></option>
+                        <option value="parana"></option>
+                        <option value="pernambuco"></option>
+                        <option value="piaui"></option>
+                        <option value="rio de janeiro"></option>
+                        <option value="rio grande do norte"></option>
+                        <option value="rio grande do sul"></option>
+                        <option value="rondonia"></option>
+                        <option value="roraima"></option>
+                        <option value="santa catarina"></option>
+                        <option value="sao paulo"></option>
+                        <option value="sergipe"></option>
+                        <option value="tocantins"></option>
+                    </select>
                 </div>
                 <div>
-                    <label for=""></label>
-                    <input type="text" name="cepUsuario" id="cepUsuario" pattern="[0-9]{5}-[0-9]{3}$" required> <!-- Estado e CEP -->
+                    <label for="cepUsuario">CEP:</label>
+                    <input type="text" name="cepUsuario" id="cepUsuario" pattern="[0-9]{5}-[0-9]{3}$" placeholder="11111-111" required> <!-- /Estado e CEP -->
                 </div>
             </div>
-        </fieldset> <!-- Fim do fieldset de endereço -->
+        </fieldset> <!-- /Fieldset de endereço -->
 
         <!-- Botões de submit e reset -->
         <div class="flexHorizontal">
