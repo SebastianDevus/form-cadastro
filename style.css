@@ -63,8 +63,16 @@ input {
     border-radius: 5px;
 }
 
+select {
+    border: 1px solid gray;
+    transition: border 0.25s linear;
+    border-radius: 5px;
+}
+
 input:hover,
-input:focus {
+input:focus,
+select:hover,
+select:focus {
     border: green 3px solid;
 }
 
