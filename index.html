@@ -20,7 +20,14 @@
 
                 <div>
                     <label for="estadoCivil">Estado civil:</label>
-                    <input type="text" name="estadoCivil" id="estadoCivil" required>
+                    <select name="estadoCivil" id="estadoCivil" required>
+                        <option value="">Selecione seu estado civil</option>
+                        <option value="1">Solteiro(a)</option>
+                        <option value="2">Casado(a)</option>
+                        <option value="3">Divorciado(a)</option>
+                        <option value="4">Viúvo(a)</option>
+                        <option value="5">Separado(a)</option>
+                    </select>
                 </div>
             </div>
 
@@ -121,6 +128,11 @@
             </div>
         </fieldset> <!-- /Fieldset de endereço -->
 
+        <div>
+            <input type="checkbox" name="liConcordo" id="liConcordo">
+            <label for="liConcordo" class="labelInline">Li e concordo</label>
+        </div>
+        
         <!-- Botões de submit e reset -->
         <div class="flexHorizontal">
             <button id="botaoEnviar" type="submit">Enviar</button>
